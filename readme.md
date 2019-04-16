@@ -1,19 +1,19 @@
- Curso  
+ *Curso*  
  - http://fgoyena.me/fs201904/
     
 # Curso FrontEnd - Clase 01
 
-*Documentacion*
+**Documentacion**
 - Bootstrap -> Oficial
 - Flexbox (y mas) -> Css-Tricks.com
 - Compatibilidad con navegadores -> CanIUse.com
 - Flexbox101 (pruebas) -> The-Echoplex.com
 
-*Ejercicios Flexbox*
+**Ejercicios Flexbox**
 - Froggy: https://flexboxfroggy.com/ 
 - Tower Defence: http://www.flexboxdefense.com/ 
 
-*Ejercicio del curso*   
+**Ejercicio del curso**   
 Hacer algo parecido a getboostrap.com/docs/4.3/examples/ -> Blog  
 Tiene que tener
 - Articulos
@@ -23,7 +23,7 @@ Tiene que tener
   
 # Curso FrontEnd - Clase 02
 
-*Contenido*
+**Contenido**
 - Node.Js
 - npm
 - Sass
@@ -34,25 +34,25 @@ Tiene que tener
 - Javascript (ES6 Arrow functions)
 - TypeScript
 
-*Documentacion*
+**Documentacion**
 - JsonPlaceholder.typicode.com
 - Es6 Cheatsheet -> https://devhints.io/es6
 
-*PlugIns recomendados de VsCode*
+**PlugIns recomendados de VsCode**
 - Live Sass (cuando no se usa Angular)
 - Live Server
 
-*node*
+**node**
 - El package.json era importante. Se crea con el npm init
 
-*npm*
+**npm**
 - -g -> Global: Se instala el coso en la pc (se usa en compiladores)
 - --save -> Se agrega al package.json
 
-*ES5 highlights*
+**ES5 highlights**
 - Releer que es (en funciones) apply, call, bind
 
-*ES6 highlights*
+**ES6 highlights**
 - Usar siempre el tipo de variable const.
 - Tambien existe el let. Es un var que respeta scopes.
 - Nunca usar var.
