@@ -4,14 +4,14 @@
 # Curso FrontEnd - Clase 01
 
 **Documentacion**
-- Bootstrap -> Oficial
-- Flexbox (y mas) -> Css-Tricks.com
-- Compatibilidad con navegadores -> CanIUse.com
-- Flexbox101 (pruebas) -> The-Echoplex.com
+- [Bootstrap Oficial -> GetBootstrap.com](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+- [Flexbox (y mas) -> Css-Tricks.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Compatibilidad con navegadores -> CanIUse.com](https://caniuse.com/)
+- [Flexbox101 (pruebas) -> The-Echoplex.net](https://the-echoplex.net/flexyboxes/)
 
 **Ejercicios Flexbox**
-- Froggy: https://flexboxfroggy.com/ 
-- Tower Defence: http://www.flexboxdefense.com/ 
+- [Froggy - flexboxfroggy.com/](https://flexboxfroggy.com/) 
+- [Tower Defence - flexboxdefense.com](http://www.flexboxdefense.com/) 
 
 **Ejercicio del curso**   
 Hacer algo parecido a getboostrap.com/docs/4.3/examples/ -> Blog  
@@ -32,11 +32,10 @@ Tiene que tener
 - Javascript (ES6)
 - Javascript (CheatSheets)
 - Javascript (ES6 Arrow functions)
-- TypeScript
 
-**Documentacion**
-- JsonPlaceholder.typicode.com
-- Es6 Cheatsheet -> https://devhints.io/es6
+**Documentacion & Tools**
+- [APIs de pueba -> JsonPlaceholder](http://jsonplaceholder.typicode.com/)
+- [Es6 Cheatsheet -> Devhints.Io](https://devhints.io/es6)
 
 **PlugIns recomendados de VsCode**
 - Live Sass (cuando no se usa Angular)
