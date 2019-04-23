@@ -43,12 +43,18 @@ nav a {
 .container {
   height: 100%;
   margin-bottom: -2.5rem;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
 footer {
   background-color: #343a40;
   color: white;
   height: 2.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 article img {

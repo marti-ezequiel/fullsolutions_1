@@ -1,6 +1,6 @@
 body, html {
     height:100%
- }
+}
 body{
     display: flex;
     flex-direction: column;
@@ -31,10 +31,14 @@ nav {
 .container{
     height: 100%;
     margin-bottom: -2.5rem;
+
+    flex-grow: 2;
 }
 
 footer{
     background-color: #343a40;
     color: white;
     height: 2.5rem;
+
+    flex-grow: 1;
 }
