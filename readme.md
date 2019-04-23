@@ -62,3 +62,12 @@ Tiene que tener
 - Existe el async/await. Siempre usar try / catch.
 - En las arrow functions, el "this" funciona distinto.
 - Releer el foreach. (for in/for of)
+- Releer Spread
+
+ # Curso FrontEnd - Clase 03
+
+ **Contenido**
+ - Repaso de extensiones de Node
+ - Repaso de SASS
+ - Repaso de JavaScript
+ - Repaso de ES6/ES5/Cheatsheet
