@@ -1,0 +1,105 @@
+body {
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 1px solid lightgray;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 8px;
+        color: dimgrey;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid darkslategray;
+        border-radius: 7px;
+        flex-grow: 1;
+        flex-basis: 33%;
+
+        margin: 1px;
+        padding: 0px;
+
+        .photo {
+            padding: 5px;
+            flex-grow: 1;
+            flex-basis: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+        .entry {
+            padding: 10px;
+            flex-grow: 1;
+            flex-basis: 100%;
+        }
+        
+        .title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 13pt;
+        }
+
+        .author {
+            font-size: 9pt;
+            font-style: italic;
+            color: gray;
+        }
+
+        .content {
+            font-size: 11pt;
+            padding: 10px;
+        }
+
+        &.main-article {
+            background-color: lightgrey;
+            flex-grow: 2;
+            flex-basis: 66%;
+            flex-direction: row;
+            
+            .photo {
+                flex-grow: 1;
+                flex-basis: 50%;
+                
+            }
+            .entry {
+                flex-grow: 1;
+                flex-basis: 50%;
+            }
+        
+            .title {
+                font-size: 18pt;
+            }
+
+            .content {
+                font-size: 13pt;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #343a40;
+    color: white;
+}
