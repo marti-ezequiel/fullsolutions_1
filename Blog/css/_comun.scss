@@ -1,0 +1,44 @@
+body, html {
+    height:100%
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 1px solid lightgray;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 8px;
+        color: dimgrey;
+    }
+}
+
+.container{
+    height: 100%;
+    margin-bottom: -2.5rem;
+
+    flex-grow: 2;
+}
+
+footer{
+    background-color: #343a40;
+    color: white;
+    height: 2.5rem;
+
+    flex-grow: 1;
+}
