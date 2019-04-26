@@ -96,3 +96,4 @@ Tiene que tener
 **Aclaraciones**
 - Dentro de assets conviene poner las imagenes (organizar).
 - Luego de instalar angular, incluir el scss en angular.json
+- Para hacer rutas a otros lados utilizar `<a routerLink="path"> Link </a>`
