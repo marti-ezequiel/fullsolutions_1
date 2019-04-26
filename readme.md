@@ -64,13 +64,35 @@ Tiene que tener
 - Releer el foreach. (for in/for of)
 - Releer Spread
 
- # Curso FrontEnd - Clase 03
+# Curso FrontEnd - Clase 03
 
- **Contenido**
- - Repaso de extensiones de Node
- - Repaso de SASS
- - Repaso de JavaScript
- - Repaso de ES6/ES5/Cheatsheet
+**Contenido**
+- Repaso de extensiones de Node
+- Repaso de SASS
+- Repaso de JavaScript
+- Repaso de ES6/ES5/Cheatsheet
+
+**Documentacion**
+- [TypeScript Cheatsheet -> Devhints.Io](https://devhints.io/typescript)
 
 **Resto de la clase**
- - Hacer la tarea
+- Hacer la tarea
+
+# Curso FrontEnd - Clase 04
+
+**Documentacion**
+- [Biblia Bootstrap -> Bootstrap Oficial](ng-bootstrap.io)
+
+**Plug-Ins Recomendados**
+- Angular 8 Snippets
+- Angular v7 Snippets
+- Angular Language Service
+
+**Comandos**
+- Instalar Angular (preferentemente en la pc) -> `npm i -g @angular/cli`
+- Inicializar proyecto Angular -> `ng new project_name --style scss --routing --skip-git`
+- Instalar Bootstrap -> `npm i --save bootstrap`
+
+**Aclaraciones**
+- Dentro de assets conviene poner las imagenes (organizar).
+- Luego de instalar angular, incluir el scss en angular.json
