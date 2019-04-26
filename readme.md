@@ -71,3 +71,6 @@ Tiene que tener
  - Repaso de SASS
  - Repaso de JavaScript
  - Repaso de ES6/ES5/Cheatsheet
+
+**Resto de la clase**
+ - Hacer la tarea

@@ -3,9 +3,42 @@
 main {
 }
 
-article {
-    img {
-        width: 100%;
-        height: 500px;
+.photo {
+    width: 100%;
+
+    background-size: 100%;
+    background-position: center; 
+
+    &::before {
+        content: " ";
+        display: block;
+        padding-top: 50%;
     }
+}
+
+.title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32pt;
+}
+
+.author {
+    font-size: 18pt;
+    font-style: italic;
+    color: gray;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    img {
+        width: auto;
+        height: 18pt;
+    }
+}
+
+.content {
+    text-indent: 36pt;
+    text-align: justify;
+    font-size: 18pt;
+    padding: 10px;
 }
