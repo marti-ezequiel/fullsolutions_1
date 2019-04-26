@@ -81,7 +81,7 @@ Tiene que tener
 # Curso FrontEnd - Clase 04
 
 **Documentacion**
-- [Biblia Bootstrap -> Bootstrap Oficial](ng-bootstrap.io)
+- [Bootstrap en Angular -> Ng Bootstrap Github](https://ng-bootstrap.github.io/)
 
 **Plug-Ins Recomendados**
 - Angular 8 Snippets
