@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { PostComponent } from './post/post.component';
 import { AuthorComponent } from './author/author.component';
+import { NavegationComponent } from './navegation/navegation.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AuthorComponent } from './author/author.component';
     FooterComponent,
     MainComponent,
     PostComponent,
-    AuthorComponent
+    AuthorComponent,
+    NavegationComponent
   ],
   imports: [
     BrowserModule,

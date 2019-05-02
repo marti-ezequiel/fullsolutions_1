@@ -92,8 +92,9 @@ Tiene que tener
 - Instalar Angular (preferentemente en la pc) -> `npm i -g @angular/cli`
 - Inicializar proyecto Angular -> `ng new project_name --style scss --routing --skip-git`
 - Instalar Bootstrap -> `npm i --save bootstrap`
+- Run Angular Server -> `ng serve`
 
 **Aclaraciones**
 - Dentro de assets conviene poner las imagenes (organizar).
-- Luego de instalar angular, incluir el scss en angular.json
+- Luego de instalar bootstrap, incluir el scss en angular.json
 - Para hacer rutas a otros lados utilizar `<a routerLink="path"> Link </a>`

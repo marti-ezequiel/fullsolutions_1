@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    flex-direction:  row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 8px;
+        color: dimgrey;
+    }
+}
