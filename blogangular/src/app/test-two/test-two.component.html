@@ -1,7 +1,5 @@
 
-<div>
-  {{ personService.nombre }}
-</div>
+<div><button (click)="saludar(personService.nombre, $event)">Hola Mundo</button> </div>
 <div>
   <a [routerLink]="['/test']">Test</a>
 </div>

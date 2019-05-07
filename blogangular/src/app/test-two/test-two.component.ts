@@ -15,4 +15,8 @@ export class TestTwoComponent implements OnInit {
   ngOnInit() {
   }
 
+  public saludar(s: string, e: MouseEvent) : void {
+    alert(s);
+    console.info(e);
+  }
 }

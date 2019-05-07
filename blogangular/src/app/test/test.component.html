@@ -1,11 +1,10 @@
 
 <div><input type="text" [(ngModel)]="personService.nombre" /> </div>
-<div><button (click)="saludar(personService.nombre, $event)">Hola Mundo</button> </div>
 <div>
   <a routerLink="/test-two">Test</a>
 </div>
 
-<div *ngIf="personService.nombre === 'pato'"> Hola {{ personService.nombre }}! </div>
+<div *ngIf="personService.nombre.toLowerCase() === 'pato'"> Hola {{ personService.nombre }}! </div>
 
 <div class="separador"> </div>
 
