@@ -92,9 +92,42 @@ Tiene que tener
 - Instalar Angular (preferentemente en la pc) -> `npm i -g @angular/cli`
 - Inicializar proyecto Angular -> `ng new project_name --style scss --routing --skip-git`
 - Instalar Bootstrap -> `npm i --save bootstrap`
+- Crear componente -> `ng g component name`
 - Run Angular Server -> `ng serve`
 
 **Aclaraciones**
 - Dentro de assets conviene poner las imagenes (organizar).
 - Luego de instalar bootstrap, incluir el scss en angular.json
 - Para hacer rutas a otros lados utilizar `<a routerLink="path"> Link </a>`
+
+# Curso FrontEnd - Clase 05
+Suspendida
+
+# Curso FrontEnd - Clase 06
+
+**Bindeo**
+ - El bindeo (one way to source) se hace a través de corchetes. ` { foo } `
+ - Existen [Pipes](https://alligator.io/angular/built-in-pipes-angular/). Maneras de formatear variables. Puede ser para formatos de fecha, currency, number, string, etc. Se configuran con la barra comun ` { foo | pipe_1 | pipe_2 } `
+ - Para bindear (two ways) se utiliza ` [(ngModel)]= "bar" `. Utilizado por ejemplo en inputs.
+ - Para utilizar `ngModel` tenemos que importar FormsModule en el appModule.
+ - `import { FormsModule } from '@angular/forms';`
+ - El bindeo de eventos se hace con paréntesis ` (click) = "foo()" `
+ - Si el routerLink tiene que evaluar una funcion, se utilizan corchetes `<a routerlink="nombre" > link </a>`
+ - Si el routerLink tiene que evaluar una funcion, se utilizan corchetes `<a [routerlink]="'nombre'" > link </a>` 
+
+**TimeOut function**
+ - Timeout ` settimeout(() => { }, 5000) `
+ - Si incluimos "changeDetection" los cambios no son automáticos, si no que hay que llamar una función.
+
+**Servicios**
+- Actúan como Singletón en el Módulo (se puede cambiar). Se agrega en la lista de providers del app.Module
+- ng g service nombre_servicio
+- O crear un nombre del archivo. por convencion nombre_service.service.ts
+- Se le agrega @Injectable()
+
+**Inyeccion de dependencia**
+- Se pueden declarar variables en los parámetros del constructor que se inyectan automáticamente.
+
+**Directivas**
+- *ngIf -> Evalúa una condición. Si sale por true se renderiza el componente. Si no... bueno, no
+- *ngFor -> Actúa como un ForOf

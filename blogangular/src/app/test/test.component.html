@@ -1,0 +1,22 @@
+
+<div><input type="text" [(ngModel)]="personService.nombre" /> </div>
+<div><button (click)="saludar(personService.nombre, $event)">Hola Mundo</button> </div>
+<div>
+  <a routerLink="/test-two">Test</a>
+</div>
+
+<div *ngIf="personService.nombre === 'pato'"> Hola {{ personService.nombre }}! </div>
+
+<div class="separador"> </div>
+
+<div *ngIf="!personService.personas.length"> No hay naides. </div>
+<div *ngIf="!!personService.personas.length">
+   <div> Hay al menos un pato. </div>
+   
+   <ul>
+     <li *ngFor="let person of personService.personas">
+       {{ person.nombre }}
+     </li>
+   </ul>
+</div>
+
