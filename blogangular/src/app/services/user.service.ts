@@ -16,8 +16,6 @@ export class UserService {
             .then((data : IUser[]) => {
 
                 this.users = data;
-
-                console.info(this.users);
             })
             .catch((exception) => {
                 console.info(exception);
