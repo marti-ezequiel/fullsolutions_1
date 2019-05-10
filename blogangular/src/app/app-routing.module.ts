@@ -5,6 +5,7 @@ import { PostComponent } from './post/post.component';
 import { AuthorComponent } from './author/author.component';
 import { TestComponent } from './test/test.component';
 import { TestTwoComponent } from './test-two/test-two.component';
+import { PersonComponent } from './person/person.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'test-two',
     component: TestTwoComponent
+  },
+  {
+    path: 'person/:id',
+    component: PersonComponent
   },
   {
     path: '',

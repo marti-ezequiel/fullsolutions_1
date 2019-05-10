@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
 import { UserService } from '../services/user.service';
+import { IPost } from '../model/interfaces/ipost';
 
 @Component({
   selector: 'app-main',
@@ -9,15 +10,14 @@ import { UserService } from '../services/user.service';
 })
 export class MainComponent implements OnInit {
 
+  public posts : IPost[] = [];
+
   constructor(
-    public postService: PostService,
-    public userService: UserService
-  ) { 
+    private postService: PostService,
+    private userService: UserService
+  ) { }
 
-  }
-
-  ngOnInit() {
+  public ngOnInit() : void {
     
   }
-
 }

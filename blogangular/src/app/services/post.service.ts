@@ -1,35 +1,26 @@
 import { Injectable } from '@angular/core';
 import { IPost } from '../model/interfaces/ipost';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class PostService {
 
-    public mainPost: IPost;
+    constructor(
+        private httpClient : HttpClient
+    ){ }
 
-    public secondaryPosts: IPost [] = [];
-    public olderPosts: IPost[] = [];
-
-    constructor(){
-
-        new Promise<IPost[]>((res, rej) => {
-
-        })
-
-        fetch('https://jsonplaceholder.typicode.com/posts', { method: "get" })
-            .then((response) => {
-                return response.json();
-            })
-            .then((data : IPost[]) => {
-
-                this.mainPost = data.shift();
-
-                this.secondaryPosts = data.slice(0, 3);
-
-                this.olderPosts = data.slice(3, 10);
-            })
-            .catch((exception) => {
-                console.info(exception);
+    public getAll() : Promise<IPost[]> {
+        return this.httpClient
+            .get<IPost[]>(`https://jsonplaceholder.typicode.com/posts`)
+            .toPromise()
+            .then(posts => {
+                return posts.slice(0, 15);
             });
+    }
 
+    public get(id: number) : Promise<IPost> {
+        return this.httpClient
+            .get<IPost>(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            .toPromise();
     }
 }
