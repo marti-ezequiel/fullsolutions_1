@@ -131,3 +131,32 @@ Suspendida
 **Directivas**
 - *ngIf -> Evalúa una condición. Si sale por true se renderiza el componente. Si no... bueno, no
 - *ngFor -> Actúa como un ForOf
+
+# Curso FrontEnd - Clase 07
+
+**Contenido**
+- Pipe Json
+- Parámetros por url
+- Observables / Suscribers
+- Http
+- Promises
+- Inputs
+- Interface OnChanges
+
+**Parámetros**
+- Para enviar parámetros a un component se puede definir en la ruta dentro del app-routing. Ej. `path: person/:id`
+- Para capturar los parámetros de la ruta se puede inyectar el ActivatedRoute (en la clase).
+- Dentro de la instancia del activatedRoute, el paramMap es un diccionario (Obserbable) que indica el valor de cada parámetro. 
+- Se puede observar el **paramMap** mediante el método suscribe `this.activatedRoute.paramMap.suscribe((p) => { });`
+- Observable = streams de información a los cuales nos suscribimos y lanzan un evento al cambiar.
+
+**Http**
+- Para usar una promise se puede usar async/await o promise.then
+- Para utilizar llamadas Http se debe incluir en app.modules (dentro de imports) `HttpClientModule`
+
+**Notas**
+- Existe un `pipe` (json) que parsea objetos. `Persona: {{ person | json }}`
+- *(Para hacer parseo de String a Int se puede poner un +).*
+- En los componetes las variables que sean Input se les agrega el decorato `@Input()`
+- Si un input recibe un objeto, se bindea (se actualizan los cambios)
+- Si una clase con inputs implementa `Onchanges`, se dispara un método cada vez que se asigne/cambie un input
