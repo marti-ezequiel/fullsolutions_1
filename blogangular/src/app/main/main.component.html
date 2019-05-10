@@ -23,78 +23,31 @@
         </section>
       </article>
     </div>
-    <div class="col-md-6 row secondary-articles">
-      <div class="col-sm-6 vertical-secondary-article">
-        <article *ngIf="postService.secondaryFPost != null && !!userService.users.length">
-          <section class="photo">
-            <div>
-              <img src="https://picsum.photos/id/{{ postService.secondaryFPost.body.length }}/1001/1000" />
-            </div>
-          </section>
-          <section class="entry">
-            <div class="title">
-                {{ postService.secondaryFPost.title }}
-            </div>
-            <div class="author">
-                Señor {{ userService.users[postService.secondaryFPost.userId - 1].name }}
-            </div>
-            <div class="content">
-                {{ postService.secondaryFPost.body }}
-            </div>
-            <div class="category">
+    <div class="col-md-6 secondary-articles">
 
-            </div>
-          </section>
-        </article>
-
-      </div>
-      <div class="col-sm-6 vertical-secondary-article">
-        <article *ngIf="postService.secondarySPost != null && !!userService.users.length">
+      <div class="col-md-12 secondary-article" 
+           *ngIf="!!postService.secondaryPosts.length && !!userService.users.length">
+        <article *ngFor="let post of postService.secondaryPosts">
             <section class="photo">
               <div>
-                <img src="https://picsum.photos/id/{{ postService.secondarySPost.body.length }}/1001/1000" />
+                <img src="https://picsum.photos/id/{{ post.body.length }}/1000/1000" />
               </div>
             </section>
             <section class="entry">
               <div class="title">
-                  {{ postService.secondarySPost.title }}
+                  {{ post.title }}
               </div>
               <div class="author">
-                  Señor {{ userService.users[postService.secondarySPost.userId - 1].name }}
+                  Señor {{ userService.users[post.userId - 1].name }}
               </div>
               <div class="content">
-                  {{ postService.secondarySPost.body }}
+                  {{ post.body }}
               </div>
               <div class="category">
   
               </div>
             </section>
         </article>
-
-      </div>
-      <div class="col-md-12 horizontal-secondary-article">
-        <article *ngIf="postService.secondaryTPost != null && !!userService.users.length">
-            <section class="photo">
-              <div>
-                <img src="https://picsum.photos/id/{{ postService.secondaryTPost.body.length }}/1001/1000" />
-              </div>
-            </section>
-            <section class="entry">
-              <div class="title">
-                  {{ postService.secondaryTPost.title }}
-              </div>
-              <div class="author">
-                  Señor {{ userService.users[postService.secondaryTPost.userId - 1].name }}
-              </div>
-              <div class="content">
-                  {{ postService.secondaryTPost.body }}
-              </div>
-              <div class="category">
-  
-              </div>
-            </section>
-        </article>
-
       </div>
     </div>
   </div>

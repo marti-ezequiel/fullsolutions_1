@@ -15,7 +15,7 @@ article {
     border-radius: 7px;
 }
 
-.main-article, .vertical-secondary-article, .normal-article {
+.main-article, .normal-article {
     padding-block-end: 15px;
     padding-inline-end: 0px;
 
@@ -25,18 +25,21 @@ article {
 }
 
 .secondary-articles{
-    padding-block-end: 0px;
-    padding-inline-end: 0px;
-    padding-inline-start: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
     margin-inline-start: 0px;
-}
-
-.horizontal-secondary-article {
-    padding-block-end: 15px;
+    margin-inline-end: 0px;
+    
+    padding-block-start: 0px;
+    padding-block-end: 0px;
+    padding-inline-start: 0px;
     padding-inline-end: 0px;
 
-    article {    
-        flex-direction: row;
+    article {
+        margin-block-start: 0px;
+        margin-block-end: 15px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
     }
 }
 

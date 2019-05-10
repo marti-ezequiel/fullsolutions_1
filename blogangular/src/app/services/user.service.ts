@@ -8,13 +8,11 @@ export class UserService {
 
     constructor(){
 
-        fetch('https://jsonplaceholder.typicode.com/users', { method: "get"}     )
+        fetch('https://jsonplaceholder.typicode.com/users', { method: "get" })
             .then((response) => {
-
                 return response.json();
             })
             .then((data : IUser[]) => {
-
                 this.users = data;
             })
             .catch((exception) => {
