@@ -1,4 +1,4 @@
-<article>
+<article [ngClass]="horizontal ? 'horizontal' : 'vertical'">
   <section class="photo">
     <div>
       <img src="https://picsum.photos/id/{{ post.body.length }}/1000/1000/" />
@@ -9,7 +9,7 @@
       {{ post.title }}
     </div>
     <div class="author">
-        Señora vaca
+        {{ post.userName }}
     </div>
     <div class="content">
       {{ post.body }}

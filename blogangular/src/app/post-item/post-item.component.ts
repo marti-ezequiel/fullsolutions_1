@@ -10,6 +10,8 @@ export class PostItemComponent implements OnInit {
 
   @Input()
   public post : IPost;
+  @Input()
+  public horizontal : Boolean;
 
   constructor() { }
 

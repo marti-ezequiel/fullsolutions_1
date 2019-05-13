@@ -1,58 +1,16 @@
 <main>
   <div class="col-12 row">
-    <app-post-item class="col-md-6 main-article">
-      <article *ngIf="postService.mainPost != null && !!userService.users.length">
-        <section class="photo">
-          <div>
-            <img src="https://picsum.photos/id/{{ postService.mainPost.body.length }}/1000/1000" />
-          </div>
-        </section>
-        <section class="entry">
-          <div class="title">
-              {{ postService.mainPost.title }}
-          </div>
-          <div class="author">
-            Señor {{ userService.users[postService.mainPost.userId - 1].name }}
-          </div>
-          <div class="content">
-              {{ postService.mainPost.body }}
-          </div>
-          <div class="category">
-
-          </div>
-        </section>
-      </article>
+    <app-post-item class="col-md-6 main-article" *ngIf="mainPost != null" [post]="mainPost">
     </app-post-item>
-    <div class="col-md-6 secondary-articles">
-
-      <div class="col-md-12 secondary-article" 
-           *ngIf="!!postService.secondaryPosts.length && !!userService.users.length">
-        <article *ngFor="let post of postService.secondaryPosts">
-            <section class="photo">
-              <div>
-                <img src="https://picsum.photos/id/{{ post.body.length }}/1000/1000" />
-              </div>
-            </section>
-            <section class="entry">
-              <div class="title">
-                  {{ post.title }}
-              </div>
-              <div class="author">
-                  Señor {{ userService.users[post.userId - 1].name }}
-              </div>
-              <div class="content">
-                  {{ post.body }}
-              </div>
-              <div class="category">
-  
-              </div>
-            </section>
-        </article>
+    <div class="col-md-6 secondary-articles" *ngIf="!!secondaryPosts.length">
+      <div *ngFor="let post of secondaryPosts" class="col-md-12 secondary-article">
+        <app-post-item [post]="post" [horizontal]="true">
+        </app-post-item>
       </div>
     </div>
-  </div>
-  <div class="col-12 row" *ngIf="!!postService.olderPosts.length && !!userService.users.length">
-    <app-post-item class="col-md-3 normal-article" *ngFor="let post of postService.olderPosts" [post]="post">
+  </div> 
+  <div class="col-12 row" *ngIf="!!olderPosts.length">
+    <app-post-item class="col-md-3 normal-article" *ngFor="let post of olderPosts" [post]="post">
     </app-post-item>
   </div>
 </main>

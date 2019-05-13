@@ -10,7 +10,9 @@ import { IPost } from '../model/interfaces/ipost';
 })
 export class MainComponent implements OnInit {
 
-  public posts : IPost[] = [];
+  public mainPost : IPost;
+  public secondaryPosts : IPost[] = [];
+  public olderPosts : IPost[] = [];
 
   constructor(
     private postService: PostService,
@@ -18,6 +20,18 @@ export class MainComponent implements OnInit {
   ) { }
 
   public ngOnInit() : void {
-    
+    this.postService.getAll().then(posts => {
+
+      for(let post of posts) {
+        this.userService.get(post.id)
+          .then(user => {
+            post.userName = user.name;
+          });
+      }
+      
+      this.mainPost = posts.shift();
+      this.secondaryPosts = posts.slice(0,3);
+      this.olderPosts = posts.slice(3);
+    })
   }
 }
