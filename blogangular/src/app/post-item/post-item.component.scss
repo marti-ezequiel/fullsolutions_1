@@ -14,6 +14,14 @@
 .title {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 13pt;
+
+    a { 
+        color: #333; 
+        
+        &:hover {
+            color: #339; 
+        }
+    }
 }
 
 .author {
@@ -27,6 +35,14 @@
     text-align: justify;
     font-size: 11pt;
     padding: 10px;
+}
+
+.readMore {
+    font-style: italic;
+    font-size: 10pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 //trololol

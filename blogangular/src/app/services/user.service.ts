@@ -4,9 +4,6 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class UserService {
-
-    private users : IUser[] = [];
-
     constructor(
         private httpClient : HttpClient
     ){ }
@@ -21,17 +18,5 @@ export class UserService {
         return this.httpClient
             .get<IUser>(`https://jsonplaceholder.typicode.com/users/${id}`)
             .toPromise();
-    }
-    
-    public getFromCache(id: number) : IUser {
-        
-        if (!!this.users.length)
-            this.getAllAsync().then(users => { this.users = users; });
-
-        return this.users.filter(user => user.id == id)[0];
-    }
-    
-    private async getAllAsync() : Promise<IUser[]> {
-        return await this.getAll();
     }
 }

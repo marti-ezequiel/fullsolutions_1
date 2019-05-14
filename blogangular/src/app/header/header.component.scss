@@ -4,4 +4,13 @@ header {
     
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-bottom: 1px solid lightgray;
+
+    a{
+        color: #333;
+
+        &:hover {
+            color: #933;
+            text-decoration: none;
+        }
+    }
 }

@@ -1,21 +1,23 @@
 <article [ngClass]="horizontal ? 'horizontal' : 'vertical'">
   <section class="photo">
     <div>
-      <img src="https://picsum.photos/id/{{ post.body.length }}/1000/1000/" />
+      <img src="https://picsum.photos/id/{{ post.id * 8 + 12 }}/1000/1000/" />
     </div>
   </section>
   <section class="entry">
     <div class="title">
-      {{ post.title }}
+      <a [routerLink]="'/post/' + post.id">
+        {{ post.title }}
+      </a>
     </div>
     <div class="author">
-        {{ post.userName }}
+      {{ post.userName }}
     </div>
     <div class="content">
       {{ post.body }}
     </div>
-    <div class="category">
-
+    <div class="readMore">
+      <a [routerLink]="'/post/' + post.id"> Read More... </a>
     </div>
   </section>
 </article>

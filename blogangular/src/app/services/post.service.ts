@@ -19,6 +19,8 @@ export class PostService {
     }
 
     public get(id: number) : Promise<IPost> {
+console.info(id);
+
         return this.httpClient
             .get<IPost>(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .toPromise();

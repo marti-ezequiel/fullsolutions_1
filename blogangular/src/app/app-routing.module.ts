@@ -6,7 +6,7 @@ import { AuthorComponent } from './author/author.component';
 
 const routes: Routes = [
   {
-    path: 'post/:id',
+    path: 'post/:postId',
     component: PostComponent
   },
   {
