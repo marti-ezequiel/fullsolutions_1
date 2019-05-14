@@ -12,6 +12,10 @@ export class PostAddEditComponent implements OnInit{
     public isReady: Boolean;
     public authors: IUser[];
 
+    public postTitle: string;
+    public postBody: string;
+    public postUserId: string;
+
     public constructor(
         private userService: UserService
     ) {}
