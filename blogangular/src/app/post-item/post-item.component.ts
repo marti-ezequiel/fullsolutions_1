@@ -13,9 +13,9 @@ export class PostItemComponent implements OnInit {
   @Input()
   public horizontal : Boolean;
 
-  constructor() { }
+  public constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() : void {
   }
 
 }

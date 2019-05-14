@@ -13,13 +13,13 @@ export class PostComponent implements OnInit {
 
   public post : IPost;
 
-  constructor(
+  public constructor(
     private activatedRoute: ActivatedRoute,
     private postService: PostService,
     private userService: UserService
   ) { }
 
-  ngOnInit() {
+  public ngOnInit() {
 
     this.activatedRoute.paramMap.subscribe(p => {
       if (p.keys.includes("postId")){

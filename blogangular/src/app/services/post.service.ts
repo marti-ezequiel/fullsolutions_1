@@ -4,8 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class PostService {
-
-    constructor(
+    public constructor(
         private httpClient : HttpClient
     ){ }
 

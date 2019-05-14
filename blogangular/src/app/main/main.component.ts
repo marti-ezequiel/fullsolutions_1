@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
   public secondaryPosts : IPost[] = [];
   public olderPosts : IPost[] = [];
 
-  constructor(
+  public constructor(
     private postService: PostService,
     private userService: UserService
   ) { }
