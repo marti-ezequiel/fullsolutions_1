@@ -11,7 +11,7 @@
       </a>
     </div>
     <div class="author">
-      {{ post.userName }}
+      <a [routerLink]="'/author/' + post.userId"> {{ post.userName }} </a>
     </div>
     <div class="content">
       {{ post.body }}

@@ -37,6 +37,9 @@ export class PostComponent implements OnInit {
                 post.userName = user.name;
                 this.post = post;
               });
+          })
+          .catch(exception => {
+            console.info(exception);
           });
       }
     })

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IPost } from '../model/interfaces/ipost';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable()
 export class PostService {
@@ -18,10 +18,19 @@ export class PostService {
     }
 
     public get(id: number) : Promise<IPost> {
-console.info(id);
 
         return this.httpClient
             .get<IPost>(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            .toPromise();
+    }
+
+    public getByUserId(id: number) : Promise<IPost[]> {
+        return this.httpClient
+            .get<IPost[]>(`https://jsonplaceholder.typicode.com/posts`,{ 
+                params: new HttpParams()
+                    .set('userId', id.toString()) 
+                }
+            )
             .toPromise();
     }
 }

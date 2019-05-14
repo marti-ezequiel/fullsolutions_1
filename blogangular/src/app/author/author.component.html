@@ -1,4 +1,4 @@
-<main class="row">
+<main class="row" *ngIf="isReady">
   <div class="col-sm-12 row">
     <div class="col-2">
       <section class="photo">
@@ -7,25 +7,24 @@
     </div>
     <div class="col-10">
       <section class="title">
-        El Pato
+        {{ user.username }}
       </section>
       <section class="col-md-10 info">
         <div class="row">
           <div class="col-3 label">Nombre: </div>
-          <div class="col answer">Don Quiroga Aguirres del Pato</div>
+          <div class="col answer">{{ user.name }}</div>
         </div>
         <div class="row">
-          <div class="col-3 label">Edad: </div>
-          <div class="col answer">Más de 30.</div>
+          <div class="col-3 label">Email: </div>
+          <div class="col answer">{{ user.email }}</div>
         </div>
         <div class="row">
-          <div class="col-3 label">Animal preferido: </div>
-          <div class="col answer"><span style="text-decoration: line-through">Monos</span> Patos.
-          </div>
+          <div class="col-3 label">Teléfono: </div>
+          <div class="col answer">{{ user.phone }}</div>
         </div>
         <div class="row">
-          <div class="col-3 label">Categoría principal: </div>
-          <div class="col answer">Anime.</div>
+          <div class="col-3 label">Página: </div>
+          <div class="col answer"><a href="{{ user.website }}">{{ user.website }}</a></div>
         </div>
       </section>
     </div>
@@ -33,4 +32,9 @@
   <section class="col-12 subtitle">
     Posts
   </section>
+  <ul>
+    <li *ngFor="let post of posts">
+      <a [routerLink]="'/post/' + post.id">{{ post.title }}</a>
+    </li>
+  </ul>
 </main>

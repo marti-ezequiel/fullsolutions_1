@@ -5,8 +5,8 @@
     {{ post.title }}
   </article>
   <article class="author">
-    <img src="assets/img/users/snail-icon.svg" />
-    {{ post.userName }} 
+    <img src="assets/img/users/snail-icon.svg" /> 
+    <a [routerLink]="'/author/' + post.userId"> {{ post.userName }} </a>
   </article>
   <article class="content">
     <div>

@@ -38,6 +38,9 @@ export class MainComponent implements OnInit {
         this.mainPost = posts.shift();
         this.secondaryPosts = posts.slice(0,3);
         this.olderPosts = posts.slice(3);
+      })
+      .catch(exception => {
+        console.info(exception);
       });
   }
 }
