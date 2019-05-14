@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class UserService {
 
-    private users :IUser[];
+    private users : IUser[] = [];
 
     constructor(
         private httpClient : HttpClient
@@ -24,13 +24,14 @@ export class UserService {
     }
     
     public getFromCache(id: number) : IUser {
-        return this.getAllCache().find(user => user.id == id);
+        
+        if (!!this.users.length)
+            this.getAllAsync().then(users => { this.users = users; });
+
+        return this.users.filter(user => user.id == id)[0];
     }
     
-    private getAllCache() : IUser[] {
-        if (!!this.users) 
-            this.getAll().then(users => { this.users = users; });
-
-        return this.users;
+    private async getAllAsync() : Promise<IUser[]> {
+        return await this.getAll();
     }
 }

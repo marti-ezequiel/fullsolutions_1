@@ -6,11 +6,11 @@ import { AuthorComponent } from './author/author.component';
 
 const routes: Routes = [
   {
-    path: 'post',
+    path: 'post/:id',
     component: PostComponent
   },
   {
-    path: 'author',
+    path: 'author/:id',
     component: AuthorComponent
   },
   {
