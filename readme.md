@@ -160,3 +160,11 @@ Suspendida
 - En los componetes las variables que sean Input se les agrega el decorato `@Input()`
 - Si un input recibe un objeto, se bindea (se actualizan los cambios)
 - Si una clase con inputs implementa `Onchanges`, se dispara un método cada vez que se asigne/cambie un input
+
+# Curso FrontEnd - Clase 08
+
+**Documentacion**
+- [Outlets en Routes](https://www.techiediaries.com/angular-router-multiple-outlets/)
+
+**Cosas**
+- Para renderizar múltiples componentes en un mismo path se le pueden asignar outlets a regiones específicas. Es difícil de explicar. Lean el link de la documentación.

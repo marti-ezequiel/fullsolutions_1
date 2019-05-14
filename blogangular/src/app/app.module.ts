@@ -13,6 +13,7 @@ import { MainComponent } from './main/main.component';
 import { PostComponent } from './post/post.component';
 import { AuthorComponent } from './author/author.component';
 import { PostItemComponent } from './post-item/post-item.component';
+import { PostAddEditComponent } from './post-add-edit/post-add-edit.component';
 import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
 
@@ -25,7 +26,8 @@ import { UserService } from './services/user.service';
     MainComponent,
     PostComponent,
     AuthorComponent,
-    PostItemComponent
+    PostItemComponent,
+    PostAddEditComponent
   ],
   imports: [
     BrowserModule,
