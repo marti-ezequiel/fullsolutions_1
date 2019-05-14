@@ -20,18 +20,24 @@ export class MainComponent implements OnInit {
   ) { }
 
   public ngOnInit() : void {
-    this.postService.getAll().then(posts => {
+    let postsPromise = this.postService.getAll();
+    const userPromise = this.userService.getAll();
 
-      for(let post of posts) {
-        this.userService.get(post.id)
-          .then(user => {
-            post.userName = user.name;
-          });
-      }
-      
-      this.mainPost = posts.shift();
-      this.secondaryPosts = posts.slice(0,3);
-      this.olderPosts = posts.slice(3);
-    })
+    Promise.all([postsPromise, userPromise])
+      .then(([posts, users]) => {
+
+        for(let post of posts){
+          const user = users.find(user => user.id === post.userId);
+
+          if (!!user) post.userName = user.name;
+        }
+
+        return posts;
+      })
+      .then(posts => {
+        this.mainPost = posts.shift();
+        this.secondaryPosts = posts.slice(0,3);
+        this.olderPosts = posts.slice(3);
+      });
   }
 }
