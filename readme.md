@@ -165,6 +165,11 @@ Suspendida
 
 **Documentacion**
 - [Outlets en Routes](https://www.techiediaries.com/angular-router-multiple-outlets/)
+- [Reactive Forms](https://angular.io/guide/reactive-forms)
+
+**Sugerencias**
+- La extensión de Visual Code **Angular Language Service** ayuda bastante
+- La extensión de Visual Code **Angular Essentials** ayuda por demás.
 
 **Cosas**
 - Para renderizar múltiples componentes en un mismo path se le pueden asignar outlets a regiones específicas. Es difícil de explicar. Lean el link de la documentación.

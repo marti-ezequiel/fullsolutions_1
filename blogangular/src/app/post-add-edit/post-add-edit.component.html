@@ -1,39 +1,35 @@
-<div *ngIf="isReady">
-    <form action="">
-        <div class="dataInput">
-            <div class="label">
-                Author
-            </div>
-            <div class="data">
-                <select>
-                    <option *ngFor="let author of authors" value="{{ author.id }}">{{ author.name }}</option>
-                </select>
-            </div>
+<form action="" *ngIf="isReady" (ngSubmit)="sendPost()">
+    <div class="dataInput">
+        <div class="label">
+            Author
         </div>
-
-        <div class="dataInput">
-            <div class="label">
-                Título
-            </div>
-            <div class="data">
-                <input type="text" />
-            </div>
+        <div class="data">
+            <select [(ngModel)]="postUserId" name="author">
+                <option *ngFor="let author of authors" value="{{ author.id }}">{{ author.name }}</option>
+            </select>
         </div>
+    </div>
 
-        <div class="dataInput">
-            <div class="label">
-                Contenido
-            </div>
-            <div class="data">
-                <textarea>
-
-                    </textarea>
-            </div>
+    <div class="dataInput">
+        <div class="label">
+            Título
         </div>
-
-        <div class="dataOutput">
-            <input type="submit" />
+        <div class="data">
+            <input type="text" [(ngModel)]="postTitle" name="title" />
         </div>
+    </div>
 
-    </form>
-</div>
+    <div class="dataInput">
+        <div class="label">
+            Contenido
+        </div>
+        <div class="data">
+            <textarea [(ngModel)]="postBody" name="body"> </textarea>
+        </div>
+    </div>
+
+    <div class="dataOutput">
+        <button [disabled]="disabledButton" type="submit">Submit</button>
+    </div>
+
+</form>

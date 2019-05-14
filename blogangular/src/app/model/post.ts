@@ -7,4 +7,14 @@ export class Post implements IPost {
     body: string;
 
     userName: string;
+
+    public constructor(
+        userId: number,
+        title: string,
+        body: string
+    ) {
+        this.userId = userId;
+        this.title = title;
+        this.body = body;
+    }
 }
