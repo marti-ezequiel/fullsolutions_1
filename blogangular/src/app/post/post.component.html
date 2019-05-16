@@ -1,4 +1,4 @@
-<main *ngIf="!!post">
+<main *ngIf="isReady && !!post">
   <article class="photo" [style.backgroundImage]="'url(https://picsum.photos/id/' + (post.id * 8 + 12) + '/1000/1000/)'">
   </article>
   <article class="title">
@@ -12,5 +12,11 @@
     <div>
       {{ post.body }}
     </div>
+  </article>
+</main>
+
+<main *ngIf="isReady && !post">
+  <article class="title">
+    Post doesn't exists.
   </article>
 </main>

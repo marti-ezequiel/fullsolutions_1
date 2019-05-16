@@ -27,7 +27,7 @@ export class MainComponent implements OnInit {
       .then(([posts, users]) => {
 
         for(let post of posts){
-          const user = users.find(user => user.id === post.userId);
+          const user = users.find(user => user.id == post.userId);
 
           if (!!user) post.userName = user.name;
         }

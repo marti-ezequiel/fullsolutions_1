@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PostComponent implements OnInit {
 
   public post : IPost;
+  public isReady : Boolean;
 
   public constructor(
     private activatedRoute: ActivatedRoute,
@@ -36,10 +37,16 @@ export class PostComponent implements OnInit {
 
                 post.userName = user.name;
                 this.post = post;
+              })
+              .catch(exception => {
+                console.info(exception);
               });
           })
           .catch(exception => {
             console.info(exception);
+          })
+          .finally(() => {
+            this.isReady = true;
           });
       }
     })

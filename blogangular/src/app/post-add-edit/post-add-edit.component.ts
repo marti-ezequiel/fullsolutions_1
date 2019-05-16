@@ -5,6 +5,7 @@ import { Post } from '../model/post';
 import { IPost } from '../model/interfaces/ipost';
 import { PostService } from '../services/post.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
 selector: 'app-post-add-edit',
@@ -13,14 +14,14 @@ styleUrls: ['./post-add-edit.component.scss']
 })
 export class PostAddEditComponent implements OnInit{
 
-    public disabledButton: boolean;
-
+    public enableSubmit: boolean;
+    public enableInput: boolean;
     public isReady: boolean;
     public authors: IUser[];
 
+    public postUserId: number;
     public postTitle: string;
     public postBody: string;
-    public postUserId: number;
 
     public constructor(
         private userService: UserService,
@@ -30,6 +31,8 @@ export class PostAddEditComponent implements OnInit{
 
     public ngOnInit() : void {
         this.isReady = false;
+        this.enableSubmit = false;
+        this.enableInput = true;
 
         this.userService
             .getAll()
@@ -44,9 +47,13 @@ export class PostAddEditComponent implements OnInit{
     }
 
     public sendPost() : void {
+        this.EvaluateSubmit();
+        if (!this.enableSubmit) return;
+
         const post : IPost = new Post(this.postUserId, this.postTitle, this.postBody);
         
-        this.disabledButton = true;
+        this.enableInput = false;
+        this.enableSubmit = false
 
         this.postService
             .savePost(post)
@@ -54,7 +61,12 @@ export class PostAddEditComponent implements OnInit{
                 this.router.navigate(['/']);
             })
             .finally(() => {
-                this.disabledButton = false;
+                this.enableInput = true;
+                this.EvaluateSubmit();
             });
+    }
+
+    public EvaluateSubmit() : void {
+        this.enableSubmit = this.enableInput && this.postUserId > 0 && !!this.postTitle && this.postTitle.length > 3 && !!this.postBody && this.postBody.length > 10 ;
     }
 }

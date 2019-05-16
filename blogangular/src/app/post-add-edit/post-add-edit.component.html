@@ -4,7 +4,7 @@
             Author
         </div>
         <div class="data">
-            <select [(ngModel)]="postUserId" name="author">
+            <select [(ngModel)]="postUserId" (change)="EvaluateSubmit()" [disabled]="!enableInput" name="author" id="author" #author="ngModel">
                 <option *ngFor="let author of authors" value="{{ author.id }}">{{ author.name }}</option>
             </select>
         </div>
@@ -15,7 +15,7 @@
             Título
         </div>
         <div class="data">
-            <input type="text" [(ngModel)]="postTitle" name="title" />
+            <input type="text" [(ngModel)]="postTitle" (keypress)="EvaluateSubmit()" [disabled]="!enableInput" name="title" id="title" #title="ngModel" />
         </div>
     </div>
 
@@ -24,12 +24,12 @@
             Contenido
         </div>
         <div class="data">
-            <textarea [(ngModel)]="postBody" name="body"> </textarea>
+            <textarea [(ngModel)]="postBody" (keypress)="EvaluateSubmit()" [disabled]="!enableInput" name="body" id="body" #body="ngModel" > </textarea>
         </div>
     </div>
 
     <div class="dataOutput">
-        <button [disabled]="disabledButton" type="submit">Submit</button>
+        <button [disabled]="!enableSubmit" type="submit">Submit</button>
     </div>
 
 </form>
