@@ -5,7 +5,6 @@ import { Post } from '../model/post';
 import { IPost } from '../model/interfaces/ipost';
 import { PostService } from '../services/post.service';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Component({
 selector: 'app-post-add-edit',

@@ -16,6 +16,7 @@ import { PostItemComponent } from './post-item/post-item.component';
 import { PostAddEditComponent } from './post-add-edit/post-add-edit.component';
 import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
+import { AuthorAddEditComponent } from './author-add-edit/author-add-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UserService } from './services/user.service';
     PostComponent,
     AuthorComponent,
     PostItemComponent,
-    PostAddEditComponent
+    PostAddEditComponent,
+    AuthorAddEditComponent
   ],
   imports: [
     BrowserModule,

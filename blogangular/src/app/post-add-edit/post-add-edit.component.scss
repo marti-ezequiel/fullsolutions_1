@@ -1,5 +1,8 @@
+$colorError: #a94442;
+$colorNoError: #42A948;
+
 .error {
-    color: red;
+    color: $colorError;
 }
 
 .label {
@@ -10,6 +13,11 @@
     
     input, select, textarea {
         width: 100%;
+        border-radius: 5px;
+    }
+    
+    input, textarea {
+        padding-left: 5px;
     }
 }
 
@@ -19,4 +27,13 @@
 
 .data, .dataOutput {
     width: 50%;
+}
+
+
+.ng-valid[required], .ng-valid.required{
+    border-left: 5px solid $colorNoError;
+}
+
+.ng-invalid:not(form){
+    border-left: 5px solid $colorError;
 }
