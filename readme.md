@@ -163,8 +163,12 @@ Suspendida
 
 # Curso FrontEnd - Clase 08
 
+**Contenido**
+- Terminar ejercicio 3 y hacer ejercicios 4, 5 y 6
+
 **Documentacion**
 - [Outlets en Routes](https://www.techiediaries.com/angular-router-multiple-outlets/)
+- [Form Validation](https://angular.io/guide/form-validation)
 - [Reactive Forms](https://angular.io/guide/reactive-forms)
 
 **Sugerencias**
@@ -173,3 +177,16 @@ Suspendida
 
 **Cosas**
 - Para renderizar múltiples componentes en un mismo path se le pueden asignar outlets a regiones específicas. Es difícil de explicar. Lean el link de la documentación.
+
+**Forms - Html**
+- El atributo `[(ngModule)]="foo"` en un input asigna el value de ese input a una variable "**foo**" en el TypeScript.
+- El atributo `#bar="ngModule"` en un input asigna el elemento "input" a una variable "**bar**" que existe **solo** dentro del template/html.
+- El atributo `#foo="ngForm"` en un form asigna el elemento "form" a una variable "**foo**" que existe **solo** dentro del template/html.
+- Con el **ngForm** y **ngModule** se pueden validar que los inputs tengan datos válidos a través de atributos.
+- - `required` hace que un input sea obligatorio
+- - `min-lenght` define un largo mínimo del contenido
+- - Estas cosas deberían leerse de la parte de "form validation" de la documentación
+
+# Curso FrontEnd - Clase 09
+
+****
