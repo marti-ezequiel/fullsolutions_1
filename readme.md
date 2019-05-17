@@ -220,3 +220,15 @@ La idea de ReactiveForm es crear y manipular los formularios desde el TypeScript
 - Se tiene que incluir el **name: 'foo'** al instanciar el **FormGroup**
 - Se tiene que incluir el attributo **`formControlName="bar"`** en el input.
 - Se tinee que incluir el **name: 'bar'** al instanciar el **FormControl**
+
+**Ejercicio 6**
+- Si se puede, agregar validador de nombre de usuario (que no exista ya).
+
+# Curso FrontEnd - Clase 10
+
+# Curso FrontEnd - Clase 11 (recuperando clase 05)
+
+#Fuera de temas
+- Para hacer mapeos de interfaces a clases, dentro del **`then`** de las llamadas hacer una llamada a un **`mapService`** que tome interfaces, instancie una nueva clase y mapee los atributos.
+- Y viceversa
+- Conviene poner un mapeador por clase
