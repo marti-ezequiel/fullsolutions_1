@@ -14,14 +14,13 @@ styleUrls: ['./post-add-edit.component.scss']
 })
 export class PostAddEditComponent implements OnInit{
 
-    public enableSubmit: boolean;
-    public enableInput: boolean;
     public isReady: boolean;
+    public enableInput: boolean;
     public authors: IUser[];
 
-    public postUserId: number;
     public postTitle: string;
     public postBody: string;
+    public postUserId: number;
 
     public constructor(
         private userService: UserService,
@@ -31,8 +30,7 @@ export class PostAddEditComponent implements OnInit{
 
     public ngOnInit() : void {
         this.isReady = false;
-        this.enableSubmit = false;
-        this.enableInput = true;
+        this.enableInput = true; 
 
         this.userService
             .getAll()
@@ -47,13 +45,8 @@ export class PostAddEditComponent implements OnInit{
     }
 
     public sendPost() : void {
-        this.EvaluateSubmit();
-        if (!this.enableSubmit) return;
-
         const post : IPost = new Post(this.postUserId, this.postTitle, this.postBody);
-        
         this.enableInput = false;
-        this.enableSubmit = false
 
         this.postService
             .savePost(post)
@@ -61,12 +54,7 @@ export class PostAddEditComponent implements OnInit{
                 this.router.navigate(['/']);
             })
             .finally(() => {
-                this.enableInput = true;
-                this.EvaluateSubmit();
+                this.enableInput = true; 
             });
-    }
-
-    public EvaluateSubmit() : void {
-        this.enableSubmit = this.enableInput && this.postUserId > 0 && !!this.postTitle && this.postTitle.length > 3 && !!this.postBody && this.postBody.length > 10 ;
     }
 }

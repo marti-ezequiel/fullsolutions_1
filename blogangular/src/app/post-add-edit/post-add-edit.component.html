@@ -1,22 +1,36 @@
-<form action="" *ngIf="isReady" (ngSubmit)="sendPost()">
+<form *ngIf="isReady" (ngSubmit)="sendPost()" #postForm="ngForm">
     <div class="dataInput">
         <div class="label">
             Author
         </div>
         <div class="data">
-            <select [(ngModel)]="postUserId" (change)="EvaluateSubmit()" [disabled]="!enableInput" name="author" id="author" #author="ngModel">
+            <select [(ngModel)]="postUserId" [disabled]="!enableInput" name="author" id="author" #author="ngModel" required>
                 <option *ngFor="let author of authors" value="{{ author.id }}">{{ author.name }}</option>
             </select>
         </div>
     </div>
+    <div class="error" *ngIf="author.invalid && (author.dirty || author.touched)">Necesitaría saber quien está haciendo el post</div>
 
     <div class="dataInput">
         <div class="label">
             Título
         </div>
         <div class="data">
-            <input type="text" [(ngModel)]="postTitle" (keypress)="EvaluateSubmit()" [disabled]="!enableInput" name="title" id="title" #title="ngModel" />
+            <input 
+                [(ngModel)]="postTitle" 
+                [disabled]="!enableInput" 
+                #title="ngModel" 
+                [ngModelOptions]="{ updateOn: 'blur' }"
+                required 
+                minlength="3"  
+                type="text" 
+                name="title" 
+                id="title" />
         </div>
+    </div>
+    <div class="error" *ngIf="title.invalid && (title.dirty || title.touched)">
+        <div *ngIf="title.errors.required">Poné un título. Al menos uno</div>
+        <div *ngIf="title.errors.minlength">Ponele más onda lpm</div>
     </div>
 
     <div class="dataInput">
@@ -24,12 +38,15 @@
             Contenido
         </div>
         <div class="data">
-            <textarea [(ngModel)]="postBody" (keypress)="EvaluateSubmit()" [disabled]="!enableInput" name="body" id="body" #body="ngModel" > </textarea>
+            <textarea [(ngModel)]="postBody" [disabled]="!enableInput" name="body" id="body" #body="ngModel" [ngModelOptions]="{ updateOn: 'blur' }" required minlength="10"> </textarea>
         </div>
+    </div>
+    <div class="error" *ngIf="body.invalid && (body.dirty || body.touched)">
+        <div *ngIf="body.errors.required">Alta noticia. Y si le agregás contenido?</div>
+        <div *ngIf="body.errors.minlength">Es gratis agregar más contenido. <br/> Copiá y pegá este msj si querés, tiene más caracteres.</div>
     </div>
 
     <div class="dataOutput">
-        <button [disabled]="!enableSubmit" type="submit">Submit</button>
+        <button [disabled]="postForm.form.invalid" type="submit">Submit</button>
     </div>
-
 </form>
