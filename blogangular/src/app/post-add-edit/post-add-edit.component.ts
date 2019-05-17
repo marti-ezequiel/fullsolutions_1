@@ -17,9 +17,7 @@ export class PostAddEditComponent implements OnInit{
     public enableInput: boolean;
     public authors: IUser[];
 
-    public postTitle: string;
-    public postBody: string;
-    public postUserId: number;
+    public post: Post = new Post(0, "", "");
 
     public constructor(
         private userService: UserService,
@@ -44,11 +42,10 @@ export class PostAddEditComponent implements OnInit{
     }
 
     public sendPost() : void {
-        const post : IPost = new Post(this.postUserId, this.postTitle, this.postBody);
         this.enableInput = false;
 
         this.postService
-            .savePost(post)
+            .savePost(this.post)
             .then(res => {
                 this.router.navigate(['/']);
             })

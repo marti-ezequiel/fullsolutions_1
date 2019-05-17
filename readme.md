@@ -165,6 +165,8 @@ Suspendida
 
 **Contenido**
 - Terminar ejercicio 3 y hacer ejercicios 4, 5 y 6
+- Formularios
+- Routes
 
 **Documentacion**
 - [Outlets en Routes](https://www.techiediaries.com/angular-router-multiple-outlets/)
@@ -179,14 +181,42 @@ Suspendida
 - Para renderizar múltiples componentes en un mismo path se le pueden asignar outlets a regiones específicas. Es difícil de explicar. Lean el link de la documentación.
 
 **Forms - Html**
-- El atributo `[(ngModule)]="foo"` en un input asigna el value de ese input a una variable "**foo**" en el TypeScript.
-- El atributo `#bar="ngModule"` en un input asigna el elemento "input" a una variable "**bar**" que existe **solo** dentro del template/html.
-- El atributo `#foo="ngForm"` en un form asigna el elemento "form" a una variable "**foo**" que existe **solo** dentro del template/html.
+Esta manera de crear el formulario se llama Template-Driven. Es porque todo el formulario se basa en el Template/HTML.
+- El atributo **`[(ngModule)]="foo"`** en un input asigna el value de ese input a una variable "**`foo`**" en el TypeScript.
+- El atributo **`#bar="ngModule"`** en un input asigna el elemento "`input`" a una variable "**`bar`**" que existe **solo** dentro del template/html.
+- El atributo **`#foo="ngForm"`** en un form asigna el elemento "`form`" a una variable "**`foo`**" que existe **solo** dentro del template/html.
 - Con el **ngForm** y **ngModule** se pueden validar que los inputs tengan datos válidos a través de atributos.
-    - `required` hace que un input sea obligatorio
-    - `min-lenght` define un largo mínimo del contenido
+    - **`required`** hace que un input sea obligatorio
+    - **`min-lenght`** define un largo mínimo del contenido
     - Estas cosas deberían leerse de la parte de "form validation" de la documentación
+- Los elementos del **ngModule** tienen una coleccion de booleanos de errores según las validaciones que no se cumpla (se recomienda leer la documentación).
+- Existe un evento del elemento `form` para bindear un 
 
 # Curso FrontEnd - Clase 09
 
-****
+**Contenido**
+- Explicación de los formularios que no dio la clase pasada para que hagamos algo por nuestra cuenta.
+- Formularios reactivos.
+
+**Documentación**
+- [Reactive Forms](https://angular.io/guide/reactive-forms)
+
+**Reactive Forms**
+La idea de ReactiveForm es crear y manipular los formularios desde el TypeScript, dejando el html lo más limpio posible.
+- Primero, incluir ReactiveForm en el AppModules.
+- Una de las maneras es instanciando (con un `new`) un **FormControl**. 
+    - Una ventaja es que se pueden crear **FormGroup** con varios "sub-formularios" (*FormControl*) .
+    - Se puede validar si un **FormGroup** que contiene varios formularios (uno para empleados, áreas, etc) es válido para dejar submitir todo de una.
+- Otra de las maneras maneras incluir en el constructor de la clase del Component FormBuilder.
+    - Se puede llamar al formbuilder con el método `group` o `control`.
+- El primer **FormGroup** es un elemento Formulario. 
+- El **FormControl** son elementos de un formularios (inputs, selects, textareas, etc. )
+- Los soguientes **FormGroup** son "formularios" de manera abstracta.
+- Los valores no quedan bindeados a una variable, si no que quedan dentro del **Form**. `this.form.get('nombre').value`
+- Para el **FormControl**, en el constructor se le puede pasar una colección de **`Validators`** para required, minLength, etc.
+
+**Reactive Form - HTML**
+- Se tiene que incluir el attributo **`[formGroup]="foo"`** en el form. 
+- Se tiene que incluir el **name: 'foo'** al instanciar el **FormGroup**
+- Se tiene que incluir el attributo **`formControlName="bar"`** en el input.
+- Se tinee que incluir el **name: 'bar'** al instanciar el **FormControl**
