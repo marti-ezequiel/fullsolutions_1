@@ -183,9 +183,9 @@ Suspendida
 - El atributo `#bar="ngModule"` en un input asigna el elemento "input" a una variable "**bar**" que existe **solo** dentro del template/html.
 - El atributo `#foo="ngForm"` en un form asigna el elemento "form" a una variable "**foo**" que existe **solo** dentro del template/html.
 - Con el **ngForm** y **ngModule** se pueden validar que los inputs tengan datos válidos a través de atributos.
-- - `required` hace que un input sea obligatorio
-- - `min-lenght` define un largo mínimo del contenido
-- - Estas cosas deberían leerse de la parte de "form validation" de la documentación
+ - `required` hace que un input sea obligatorio
+ - `min-lenght` define un largo mínimo del contenido
+ - Estas cosas deberían leerse de la parte de "form validation" de la documentación
 
 # Curso FrontEnd - Clase 09
 
