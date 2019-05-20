@@ -17,6 +17,7 @@ import { PostAddEditComponent } from './post-add-edit/post-add-edit.component';
 import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
 import { AuthorAddEditComponent } from './author-add-edit/author-add-edit.component';
+import { PostMapService } from './services/postMap.Service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AuthorAddEditComponent } from './author-add-edit/author-add-edit.compon
   ],
   providers: [
     PostService,
-    UserService
+    UserService,
+    PostMapService
   ],
   bootstrap: [AppComponent]
 })

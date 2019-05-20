@@ -17,7 +17,7 @@ export class PostAddEditComponent implements OnInit{
     public enableInput: boolean;
     public authors: IUser[];
 
-    public post: Post = new Post(0, "", "");
+    public post: Post = new Post();
 
     public constructor(
         private userService: UserService,
