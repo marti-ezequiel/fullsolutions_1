@@ -12,5 +12,13 @@ export class User implements IUser {
     website: string;
     company: ICompany;
 
-    constructor() { }
+    constructor();
+    constructor(id: number, userName: string, name: string, email: string);
+    constructor(id?: number, userName?: string, name?: string, email?: string) 
+    { 
+        this.id = id || 0;
+        this.username = userName || '';
+        this.name = name || '';
+        this.email = email || '';
+    }
 }

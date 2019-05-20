@@ -1,0 +1,41 @@
+$colorError: #a94442;
+$colorErrorBack: #E4C1BD;
+$colorNoError: #42A948;
+
+.data {
+    margin-top: 6pt;
+    width: 256px;
+
+    input {
+        width: 100%;
+        border-radius: 5px;
+        padding-left: 5px;
+    }
+
+    .error{
+        color: $colorError;
+    }
+}
+
+.dataOutput{
+    margin-top: 10pt;
+    width: 256px;
+
+    .error{
+        background-color: $colorErrorBack;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid $colorError;
+        margin: 3px;
+        text-align: center;
+        color: $colorError;
+    }
+}
+
+.ng-valid:not(form), .ng-valid.required{
+    border-left: 5px solid $colorNoError;
+}
+
+.ng-invalid:not(form){
+    border-left: 5px solid $colorError;
+}

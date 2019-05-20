@@ -17,7 +17,7 @@ export class PostService {
         return this.httpClient
             .get<IPost[]>(`https://jsonplaceholder.typicode.com/posts`)
             .toPromise()
-            .then(posts => {;
+            .then(posts => {
                 return this.hardCodedPosts.concat(posts.slice(0, 15));
             })
             .then(posts => {
@@ -44,7 +44,7 @@ export class PostService {
     public get(id: number) : Promise<Post> {
 
         if(id >= 101) return new Promise(resolve => {
-            resolve(this.mapper.mapIPostToPost(this.hardCodedPosts.find(post => post.id === id)));
+            resolve(this.mapper.mapIPostToPost(this.hardCodedPosts.find(post => post.id == id)));
         });
 
         return this.httpClient
@@ -53,7 +53,7 @@ export class PostService {
             .then(post => this.mapper.mapIPostToPost(post));
     }
 
-    public savePost(post: Post) : Promise<any> {
+    public savePost(post: Post) : Promise<void> {
         post.id = 101 + this.hardCodedPosts.length;
 
         return this.httpClient
