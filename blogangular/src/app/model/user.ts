@@ -2,7 +2,7 @@ import { IUser } from './interfaces/iuser';
 import { IAddress } from './interfaces/iaddress';
 import { ICompany } from './interfaces/icompany';
 
-export class user implements IUser {
+export class User implements IUser {
     id: number;    
     name: string;
     username: string;

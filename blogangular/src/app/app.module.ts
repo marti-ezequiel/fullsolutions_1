@@ -18,6 +18,7 @@ import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
 import { AuthorAddEditComponent } from './author-add-edit/author-add-edit.component';
 import { PostMapService } from './services/postMap.service';
+import { UserMapService } from './services/userMap.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PostMapService } from './services/postMap.service';
   providers: [
     PostService,
     UserService,
-    PostMapService
+    PostMapService,
+    UserMapService
   ],
   bootstrap: [AppComponent]
 })
