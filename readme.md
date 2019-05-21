@@ -227,10 +227,71 @@ La idea de ReactiveForm es crear y manipular los formularios desde el TypeScript
 # Curso FrontEnd - Clase 10
 
 **Contenido**
+- Resumen de angular
+- ReactJs
 
 **Documentación**
 - [Angular Seed Repositorio](https://github.com/mgechev/angular-seed) - Una estructura de ejemplo para las divisiones / módulos / routeo.
 - [Angular Seed Documentación](https://github.com/mgechev/angular-seed/blob/master/README.old.md) - El proyecto fue deprecado pero la estructura es para lo que lo estamos leyendo.
+- [Angular Architecture](https://angular.io/guide/architecture)
+
+**Comandos**
+- Install react - `npm i -g create-react-app`
+
+**Angular Seed**
+Es un proyecto base que se puede utilizar como base de otros proyectos.  
+- División en módulos
+- En **`routing.module.ts`** muestra como dividir el manejo de rutas por módulos. 
+
+**Overview de Angular**
+- Architecture
+    - Estructura de un módulo
+    - Bindeo de texto (interpolación) con dobles llaves `<div> {{ foo }} </div>`.
+    - Bindeo de propiedades con corchetes `<div [foo]="bar"> Hi </div>`
+    - Exportar variables con hashtags `<div #foo> Hi </div>`.
+    - Bindear eventos es con paréntesis `<div (foo)="bar()"> Hi </div>`.
+    - *ngIf
+    - *ngFor
+    - Bindeo Two-way lo utilizamos (durante el curso) solo para el ngModel. Se hace con Corchetes y paréntesis `<div [(foo)]="bar" > </div>`
+- Lifecycle sequence - eventos que necesitan la implementación de una interfaz para poderlos implementar.
+    - constructor()
+    - ngOnChanges()
+    - ngOnInit()
+    - ngDoCheck()
+    - ngAfterContentInit()
+    - ngAfterContentCheked()
+    - ngAfterViewInit()
+- Attribute directives
+- Structural directives
+- Forms
+    - Template
+    - Reactive
+- Observables
+    - Es importante desuscribirse
+    - Canales de eventos
+- Inyección de dependencia
+- Http Client
+- Routing & Navigation
+- Guards (dentro del routeo)
+    - Tener un método que evaluar si podés acceder o no a esa ruta (usado en autenticación)
+    - Existe un método para un observable
+    - Existe un método para una promise
+- Interceptor
+    - Se definen en el módulo que se quiere usar
+    - Puede itnerponerse a cualquier request
+        - Ejemplo de request: agregarle un toquen a una llamada
+    - Puede interceptar a un response
+        - Puede identificar un 401 y volver a hacer llamda
+        - Puede loguear respuestas
+
+**React**
+Es una librería que te deja manejar un DOM.  
+Si se le agregan algunos componentes (builds y otros) creados por la comunidad puede ser considerado un framework.  
+Utiliza javascript con ES6 (en lugar de typescript) y JSX. Se puede integrar SASS y TypeScript.  
+Maneja un DOM virtual para ir resolviendo todo de antemano.
+- props: las modifica el padre
+- state: puede modificarse en el mismo componente (no el padre, no el hijo)
+    - Se modifica con un this(setState)
 
 # Curso FrontEnd - Clase 11 (recuperando clase 05)
 
@@ -238,3 +299,16 @@ La idea de ReactiveForm es crear y manipular los formularios desde el TypeScript
 - Para hacer mapeos de interfaces a clases, dentro del **`then`** de las llamadas hacer una llamada a un **`mapService`** que tome interfaces, instancie una nueva clase y mapee los atributos.
 - Y viceversa
 - Conviene poner un mapeador por clase
+
+**Leer Aparte**
+- Interceptors
+- Guards
+- `@Output`
+- Directivas. No llegamos a verlas. Excepto las estructurales (ngFor, ngIf, etc.)
+    - Modificación de DOM
+    - Manejo de eventos
+- Observables RxJS
+    - Canal de eventos
+    - Pipe
+    - Map
+
