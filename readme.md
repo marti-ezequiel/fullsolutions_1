@@ -226,6 +226,12 @@ La idea de ReactiveForm es crear y manipular los formularios desde el TypeScript
 
 # Curso FrontEnd - Clase 10
 
+**Contenido**
+
+**Documentación**
+- [Angular Seed Repositorio](https://github.com/mgechev/angular-seed) - Una estructura de ejemplo para las divisiones / módulos / routeo.
+- [Angular Seed Documentación](https://github.com/mgechev/angular-seed/blob/master/README.old.md) - El proyecto fue deprecado pero la estructura es para lo que lo estamos leyendo.
+
 # Curso FrontEnd - Clase 11 (recuperando clase 05)
 
 # Fuera de temas
