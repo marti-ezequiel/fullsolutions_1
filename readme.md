@@ -234,9 +234,18 @@ La idea de ReactiveForm es crear y manipular los formularios desde el TypeScript
 - [Angular Seed Repositorio](https://github.com/mgechev/angular-seed) - Una estructura de ejemplo para las divisiones / módulos / routeo.
 - [Angular Seed Documentación](https://github.com/mgechev/angular-seed/blob/master/README.old.md) - El proyecto fue deprecado pero la estructura es para lo que lo estamos leyendo.
 - [Angular Architecture](https://angular.io/guide/architecture)
+- [React](https://reactjs.org/)
+
+**Extensiones VisualCode**
+- [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
+**Extensiones Chrome**
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es-419) - Agrega Tab **React** en la consola
 
 **Comandos**
 - Install react - `npm i -g create-react-app`
+- Opciones para crear proyecto en react - `create-react-app --help`
+- Crear app en react - `create-react-app nombreProyecto`
 
 **Angular Seed**
 Es un proyecto base que se puede utilizar como base de otros proyectos.  
@@ -293,6 +302,8 @@ Maneja un DOM virtual para ir resolviendo todo de antemano.
 - state: puede modificarse en el mismo componente (no el padre, no el hijo)
     - Se modifica con un this(setState)
 
+Antes la aplicación iniciada en **`main.ts`**. Ahora en **`index.js`**
+
 # Curso FrontEnd - Clase 11 (recuperando clase 05)
 
 # Fuera de temas
@@ -311,4 +322,6 @@ Maneja un DOM virtual para ir resolviendo todo de antemano.
     - Canal de eventos
     - Pipe
     - Map
-
+- Redux - Permite tener estados en la aplicación
+- Ionic (mobile)
+- React native (mobile)
