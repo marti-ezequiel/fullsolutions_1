@@ -228,7 +228,7 @@ La idea de ReactiveForm es crear y manipular los formularios desde el TypeScript
 
 # Curso FrontEnd - Clase 11 (recuperando clase 05)
 
-#Fuera de temas
+# Fuera de temas
 - Para hacer mapeos de interfaces a clases, dentro del **`then`** de las llamadas hacer una llamada a un **`mapService`** que tome interfaces, instancie una nueva clase y mapee los atributos.
 - Y viceversa
 - Conviene poner un mapeador por clase
