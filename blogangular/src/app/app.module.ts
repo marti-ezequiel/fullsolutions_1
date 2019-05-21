@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,8 @@ import { PostAddEditComponent } from './post-add-edit/post-add-edit.component';
 import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
 import { AuthorAddEditComponent } from './author-add-edit/author-add-edit.component';
+import { PostMapService } from './services/postMap.service';
+import { UserMapService } from './services/userMap.service';
 
 @NgModule({
   declarations: [
@@ -35,11 +37,14 @@ import { AuthorAddEditComponent } from './author-add-edit/author-add-edit.compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [
     PostService,
-    UserService
+    UserService,
+    PostMapService,
+    UserMapService
   ],
   bootstrap: [AppComponent]
 })

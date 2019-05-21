@@ -4,16 +4,28 @@ import { IPost } from '../model/interfaces/ipost';
 
 @Injectable()
 export class PostMapService {
-
-    public constructor() {}
-
-    public mapIPostToPost(post: IPost) : Post {
+    
+    public mapIPostStringToPost (post: IPost, userName: string) : Post {
         return {
             id: post.id,
             userId: post.userId,
             title: post.title,
             body: post.body,
-            userName: ''
-        };
+
+            userName: userName
+        }
+    }
+
+    public mapIPostToPost (post: IPost) : Post {
+        return this.mapIPostStringToPost(post, '');
+    }
+
+    public mapPostToIPost (post: Post) : IPost {
+        return {
+            id: post.id,
+            userId: post.userId,
+            title: post.title,
+            body: post.body,
+        }
     }
 }

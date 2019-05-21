@@ -1,0 +1,48 @@
+<form [formGroup]="userForm" (submit)="sendAuthor()">
+    <div class="data">
+        <div class="label"> Usuario </div>
+        <div class="input">
+            <input type="text" formControlName="userName" />
+        </div>
+        <div class="error" *ngIf="userForm.get('userName').invalid && (userForm.get('userName').touched || userForm.get('userName').dirty)">
+                <div *ngIf="userForm.get('userName').errors.required">
+                    UserName requerido
+                </div>
+                <div *ngIf="userForm.get('userName').errors.minlength">
+                    Minimo 5 caracteres
+                </div>
+        </div>
+    </div>
+    <div class="data">
+        <div class="label"> Nombre </div>
+        <div class="input">
+            <input type="text" formControlName="name" />
+        </div>
+        <div class="error" *ngIf="userForm.get('name').invalid && (userForm.get('name').touched || userForm.get('name').dirty)">
+                <div *ngIf="userForm.get('name').errors.required">
+                    Nombre requerido
+                </div>
+                <div *ngIf="userForm.get('name').errors.minlength">
+                    Minimo 3 caracteres
+                </div>
+        </div>
+    </div>
+    <div class="data">
+        <div class="label"> Email </div>
+        <div class="input">
+            <input type="text" formControlName="email" />
+        </div>
+        <div class="error" *ngIf="userForm.get('email').invalid && (userForm.get('email').touched || userForm.get('email').dirty)">
+                <div *ngIf="userForm.get('email').errors.required">
+                    Email requerido
+                </div>
+                <div *ngIf="userForm.get('email').errors.email">
+                    Formato incorrecto
+                </div>
+        </div>
+    </div>
+    <div class="dataOutput">
+        <div *ngIf="!!serverError" class="error">{{ serverError }}</div>
+        <button type="submit"> Crear </button>
+    </div>
+</form>

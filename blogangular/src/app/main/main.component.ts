@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
 import { UserService } from '../services/user.service';
-import { IPost } from '../model/interfaces/ipost';
+import { Post } from '../model/post';
 
 @Component({
   selector: 'app-main',
@@ -10,9 +10,9 @@ import { IPost } from '../model/interfaces/ipost';
 })
 export class MainComponent implements OnInit {
 
-  public mainPost : IPost;
-  public secondaryPosts : IPost[] = [];
-  public olderPosts : IPost[] = [];
+  public mainPost : Post;
+  public secondaryPosts : Post[] = [];
+  public olderPosts : Post[] = [];
 
   public constructor(
     private postService: PostService,

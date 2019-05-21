@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IUser } from '../model/interfaces/iuser';
 import { UserService } from '../services/user.service';
 import { Post } from '../model/post';
-import { IPost } from '../model/interfaces/ipost';
 import { PostService } from '../services/post.service';
 import { Router } from '@angular/router';
 
@@ -17,7 +16,7 @@ export class PostAddEditComponent implements OnInit{
     public enableInput: boolean;
     public authors: IUser[];
 
-    public post: Post = new Post(0, "", "");
+    public post: Post = new Post();
 
     public constructor(
         private userService: UserService,

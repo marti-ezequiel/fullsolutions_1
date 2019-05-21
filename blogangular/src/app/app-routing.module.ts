@@ -4,6 +4,7 @@ import { MainComponent } from './main/main.component';
 import { PostComponent } from './post/post.component';
 import { AuthorComponent } from './author/author.component';
 import { PostAddEditComponent } from './post-add-edit/post-add-edit.component';
+import { AuthorAddEditComponent } from './author-add-edit/author-add-edit.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'addPost',
     component: PostAddEditComponent
+  },
+  {
+    path: 'addAuthor',
+    component: AuthorAddEditComponent
   },
   {
     path: '',
