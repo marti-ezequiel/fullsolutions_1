@@ -38,8 +38,8 @@ Tiene que tener
 - [Es6 Cheatsheet -> Devhints.Io](https://devhints.io/es6)
 
 **PlugIns recomendados de VsCode**
-- Live Sass (cuando no se usa Angular)
-- Live Server
+- [Live Sass](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) (cuando no se usa Angular)
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 **node**
 - El package.json era importante. Se crea con el npm init
@@ -84,9 +84,9 @@ Tiene que tener
 - [Bootstrap en Angular -> Ng Bootstrap Github](https://ng-bootstrap.github.io/)
 
 **Plug-Ins Recomendados**
-- Angular 8 Snippets
-- Angular v7 Snippets
-- Angular Language Service
+- [Angular 8 Snippets](https://marketplace.visualstudio.com/items?itemName=Mikael.Angular-BeastCode)
+- [Angular v7 Snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
+- [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 
 **Comandos**
 - Instalar Angular (preferentemente en la pc) -> `npm i -g @angular/cli`
@@ -174,8 +174,8 @@ Suspendida
 - [Reactive Forms](https://angular.io/guide/reactive-forms)
 
 **Sugerencias**
-- La extensión de Visual Code **Angular Language Service** ayuda bastante
-- La extensión de Visual Code **Angular Essentials** ayuda por demás.
+- La extensión de Visual Code **[Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)** ayuda bastante
+- La extensión de Visual Code **[Angular Essentials](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials)** ayuda por demás.
 
 **Cosas**
 - Para renderizar múltiples componentes en un mismo path se le pueden asignar outlets a regiones específicas. Es difícil de explicar. Lean el link de la documentación.
