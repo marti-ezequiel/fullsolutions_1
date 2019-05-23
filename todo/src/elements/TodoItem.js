@@ -20,7 +20,8 @@ export default class TodoItem extends Component {
     getSpanStlyes = () => {
         return { 
             textDecoration: this.props.todo.succeeded ? 'line-through' : '',
-            marginLeft: '5px'
+            marginLeft: '5px',
+            cursor: 'pointer'
         };
     }
 
@@ -28,7 +29,7 @@ export default class TodoItem extends Component {
         return (
             <div> 
                 <input type="checkbox" name="success" checked={this.props.todo.succeeded} onChange={this.toggle} />
-                <span style={this.getSpanStlyes()}>{this.props.todo.title} </span>
+                <span style={this.getSpanStlyes()} onClick={this.toggle}>{this.props.todo.title} </span>
             </div>
         )
     }
