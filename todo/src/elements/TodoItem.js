@@ -17,15 +17,18 @@ export default class TodoItem extends Component {
         this.props.toggle(this.props.todo);
     }
 
-    render() {
+    getSpanStlyes = () => {
+        return { 
+            textDecoration: this.props.todo.succeeded ? 'line-through' : '',
+            marginLeft: '5px'
+        };
+    }
 
+    render() {
         return (
             <div> 
                 <input type="checkbox" name="success" checked={this.props.todo.succeeded} onChange={this.toggle} />
-                <span style={{
-                    textDecoration: this.props.todo.succeeded ? 'line-through' : '',
-                    marginLeft: '5px'
-                }}>{this.props.todo.title} </span>
+                <span style={this.getSpanStlyes()}>{this.props.todo.title} </span>
             </div>
         )
     }
