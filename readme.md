@@ -306,6 +306,37 @@ Antes la aplicación iniciada en **`main.ts`**. Ahora en **`index.js`**
 
 # Curso FrontEnd - Clase 11 (recuperando clase 05)
 
+**Contenido**
+- Blog en React
+Todo lo que es public (assets) va en la carpeta **`public`**.  
+Los SVG se manejan de manera... rara (repasar).  
+- Existe una librería que es muy utilizada para llamdas http, llamda **Axios** (no tiene nada que ver con react)
+- Las cosas que en angular se ejecutaban en el ngOninit, acá es en componentWillMount.
+- Existe una librería que es muy utilizada para routing en react, **react-router-dom** (mantenido por la comunidad)
+- Para renonbrar un componente se puede utilizar **`as`** al momento de importar.
+- El route es un elemento dentro del jsx (dentro del render)
+- Se puede routear escribiendo el contenido explícito o poner a qué componente redirecciona
+- Si al route no se le asigna el atributo ``exact``, puede tomarse como un partial view y renderizar varios componentes.
+- Existe un router para renderizar todos los path que no fueron configurados. Es poniendo el elemento **`<Switch>`**.
+- ***React BoilerPlate*** - Es una seed de React: una guía de como armar un proyecto (o proyecto base), con varias dependencias claves ya incluidas.
+- ***Redlux*** - Incluye la posibilidad de tener un State a nivel aplicación, en lugar de a nivel de clase. **React y Redlux** van de la mano.
+- ***NgRx*** - Algo importante para Angular, similar a Redlux para React.
+- Existe un elemento llamado **React.Fragment**. Es una especie de **`<div>`** que no se renderiza.
+
+**Documentación**
+- [Repositorio Axios](https://github.com/axios/axios)
+- [Repositrio React Boiler Plate](https://github.com/react-boilerplate/react-boilerplate)
+
+**Comandos**
+- Para instalar **axion** --> `npm install axios --save`
+- Para instalar **react-router-dom** --> `npm install react-router-dom --save`
+
+**Comandos React**
+- `start`
+- `build`
+- `test`
+- `eject`
+
 # Fuera de temas
 - Para hacer mapeos de interfaces a clases, dentro del **`then`** de las llamadas hacer una llamada a un **`mapService`** que tome interfaces, instancie una nueva clase y mapee los atributos.
 - Y viceversa
